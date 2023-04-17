@@ -14,8 +14,9 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: "container",
       remotes: {
-        marketing: "marketing@http://localhost:8081/remoteEntry.js",
-        // marketing: `marketing@${domain}/marketing/remoteEntry.js`,
+        // https://mfe-marketing.vercel.app/
+        // marketing: "marketing@http://localhost:8081/remoteEntry.js",
+        marketing: `marketing@https://mfe-marketing.vercel.app/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),
